@@ -1,0 +1,50 @@
+{
+  "name": "Large media",
+  "description": "Large media with heading and optional subheading",
+  "fields": [
+    {
+      "label": "Content",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "heading",
+          "label": "Heading",
+          "type": "text"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "short_text"
+        },
+        {
+          "id": "image",
+          "label": "Large image",
+          "type": "image",
+          "required": true
+        }
+      ]
+    },
+    {
+      "label": "Styling",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "bg_color",
+          "label": "Background color",
+          "type": "select",
+          "default": "primary-lighter",
+          "options": [
+            {
+              "value": "primary-lightest",
+              "label": "Background (primary)"
+            },
+            {
+              "value": "primary-lighter",
+              "label": "Background (secondary)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

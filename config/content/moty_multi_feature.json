@@ -1,0 +1,66 @@
+{
+  "name": "Moty Multiple features",
+  "description": "Multiple features with an icon and label",
+  "fields": [
+    {
+      "label": "Content",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "heading",
+          "label": "Heading text",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "features",
+          "label": "Features",
+          "type": "collection",
+          "fields": [
+            {
+              "id": "icon",
+              "label": "Icon",
+              "type": "icon",
+              "required": true
+            },
+            {
+              "id": "label",
+              "label": "Label",
+              "type": "text",
+              "required": true
+            },
+            {
+              "id": "description",
+              "label": "Description",
+              "type": "text",
+              "required": true
+            }
+
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Styling",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "bg_color",
+          "label": "Background color",
+          "type": "select",
+          "default": "primary-lighter",
+          "options": [
+            {
+              "value": "primary-lighter",
+              "label": "Background light"
+            },
+            {
+              "value": "primary-darker",
+              "label": "Background dark"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

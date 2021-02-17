@@ -1,0 +1,44 @@
+{
+  "name": "Moty customer reviews",
+  "description": "Moty selection of customer reviews or quotes",
+  "fields": [
+    {
+      "label": "Content",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "heading",
+          "label": "Heading",
+          "type": "text"
+        },
+        {
+          "id": "reviews",
+          "label": "Reviews",
+          "type": "collection",
+          "fields": [
+            {
+              "id": "name",
+              "label": "Customer's name and age",
+              "type": "text"
+            },
+            {
+              "id": "location",
+              "label": "Customer's career and location",
+              "type": "text"
+            },
+            {
+              "id": "quote",
+              "label": "Review text/Quote",
+              "type": "textarea"
+            },
+            {
+              "id": "image",
+              "label": "Customer's image",
+              "type": "image"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

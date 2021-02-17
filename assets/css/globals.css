@@ -1,0 +1,139 @@
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  @apply bg-primary-lightest;
+}
+
+a,
+button {
+  @apply transition-all duration-200 ease-out;
+}
+
+@responsive {
+  .container {
+    @apply mx-auto px-6;
+
+    @screen lg {
+      @apply max-w-full px-8;
+    }
+
+    @screen xl {
+      @apply px-0;
+    }
+  }
+}
+
+.btn {
+  @apply inline-block h-12 px-7 py-3 rounded-full text-lg font-body_semibold font-semibold bg-moty-light text-center uppercase cursor-pointer;  
+  line-height: var(--type-scale-5);
+  letter-spacing: 0.75px;
+
+  &:hover {
+    @apply bg-primary-darker text-primary-lightest;
+  }
+
+  &:focus {
+    @apply outline-none shadow-outline;
+  }
+
+  &.disabled,
+  &.loading {
+    @apply bg-moty-lighter text-moty-dark pointer-events-none;
+
+    &:hover {
+      @apply bg-moty-lighter text-moty-dark;
+    }
+  }
+
+  &.loading {
+    @apply cursor-wait;
+  }
+
+  &.light {
+    @apply bg-moty-okmed text-moty-light;
+
+    &:hover {
+      @apply bg-moty-okdark;
+    }
+  }
+}
+
+.btn--main,
+.btn--lg {
+  @apply h-14 bg-primary-darkest text-primary-lightest;
+
+  &.disabled,
+  &.loading {
+    @apply bg-primary-med text-primary-lightest;
+
+    &:hover {
+      @apply bg-primary-med text-primary-lightest;
+    }
+  }
+}
+
+.btn--lg {
+  @apply block py-5;
+}
+
+.btn-icon {
+  @apply w-10 h-10 bg-primary-light rounded-sm;
+
+  &:hover {
+    @apply bg-primary-darker text-primary-lightest;
+  }
+}
+
+img {
+  &.loaded {
+    transition: opacity 0.4s ease;
+    opacity: 1 !important;
+  }
+
+  &.loading {
+    opacity: 0;
+  }
+}
+
+img {
+  &.loaded {
+    transition: opacity 0.4s ease;
+    opacity: 1 !important;
+  }
+
+  &.loading {
+    opacity: 0;
+  }
+}
+
+img {
+  &.loaded {
+    transition: opacity 0.4s ease;
+    opacity: 1 !important;
+  }
+
+  &.loading {
+    opacity: 0;
+  }
+}
+
+.cta-link {
+  @apply inline-block pb-1 border-b rounded-none border-primary-darkest;
+
+  &.light {
+    @apply text-primary-lightest border-primary-lightest;
+  }
+}
+
+.label-tag {
+  @apply ml-1 px-2 py-1 uppercase text-2xs rounded font-semibold leading-tight;
+}
+
+.label-tag--sale {
+  @apply bg-error-faded text-error;
+}
+
+.loader-el {
+  @apply bg-primary-light rounded-sm animate-pulse;
+}

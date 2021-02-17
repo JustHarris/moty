@@ -1,0 +1,199 @@
+[
+  {
+    "name": "Footer",
+    "id": "footer",
+    "theme_menu_id": "footer",
+    "theme_id": "origin",
+    "items": [
+      {
+        "type": "column",
+        "items": [
+          {
+            "name": "Sobre nosotros",
+            "type": "content",
+            "model": "pages",
+            "value": {
+              "id": "601fe306040a4a291e5383ff",
+              "name": "Sobre nosotros",
+              "slug": "sobre-nosotros",
+              "published": true
+            }
+          },
+          {
+            "name": "Movilidad",
+            "type": "content",
+            "model": "pages",
+            "value": {
+              "id": "601fe337040a4a291e538884",
+              "name": "Movilidad",
+              "slug": "movilidad",
+              "published": false
+            }
+          }
+        ]
+      },
+      {
+        "type": "column",
+        "items": [
+          {
+            "name": "Como funciona",
+            "type": "content",
+            "model": "pages",
+            "value": {
+              "id": "601fe365461e36559d760ff6",
+              "name": "Como funciona",
+              "slug": "como-funciona",
+              "published": false
+            }
+          },
+          {
+            "name": "Vehiculos",
+            "type": "content",
+            "model": "pages",
+            "value": {
+              "id": "601fe3a52ddd83580ee7a6b4",
+              "name": "vehiculos",
+              "slug": "vehiculos",
+              "published": false
+            }
+          }
+        ]
+      },
+      {
+        "type": "column",
+        "items": []
+      }
+    ]
+  },
+  {
+    "name": "Footer secondary",
+    "id": "footer-secondary",
+    "theme_id": "origin",
+    "theme_menu_id": "footer-secondary",
+    "items": [
+      {
+        "type": "content",
+        "model": "pages",
+        "name": "Shipping & Returns",
+        "value": {
+          "id": "5fb90c020d09396433f4c556",
+          "name": "Shipping & Returns",
+          "slug": "shipping-returns",
+          "published": true
+        }
+      },
+      {
+        "type": "content",
+        "model": "pages",
+        "name": "Privacy policy",
+        "value": {
+          "id": "5fb90c020d09396433f4c54e",
+          "name": "Privacy Policy",
+          "slug": "privacy-policy",
+          "published": true
+        }
+      },
+      {
+        "type": "content",
+        "model": "pages",
+        "name": "Terms & Conditions",
+        "value": {
+          "id": "5fb90c020d09396433f4c552",
+          "name": "Terms & Conditions",
+          "slug": "terms-conditions",
+          "published": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "id": "header",
+    "theme_menu_id": "header",
+    "theme_id": "origin",
+    "items": [
+      {
+        "name": "Planes",
+        "type": "category",
+        "items": [
+          {
+            "type": "column",
+            "items": [
+              {
+                "name": "Patines",
+                "type": "category",
+                "value": {
+                  "id": "60257fdfcccdee6b3a88780f",
+                  "description": null,
+                  "images": null,
+                  "name": "Patines",
+                  "slug": "patines"
+                }
+              },
+              {
+                "name": "Bicicletas",
+                "type": "category",
+                "value": {
+                  "id": "602580076a580e33b795331e",
+                  "description": null,
+                  "images": null,
+                  "name": "Bicicletas",
+                  "slug": "bicicletas"
+                }
+              },
+              {
+                "name": "Motos",
+                "type": "category",
+                "value": {
+                  "id": "60258022cccdee6b3a887f0f",
+                  "description": null,
+                  "images": null,
+                  "name": "Motos",
+                  "slug": "motos"
+                }
+              }
+            ]
+          }
+        ],
+        "value": {}
+      },
+      {
+        "name": "Vehiculos",
+        "type": "content",
+        "model": "pages",
+        "value": {
+          "id": "601fe3a52ddd83580ee7a6b4",
+          "name": "vehiculos",
+          "slug": "vehiculos",
+          "published": false
+        }
+      },
+      {
+        "name": "Como funciona",
+        "type": "content",
+        "model": "pages",
+        "value": {
+          "id": "601fe365461e36559d760ff6",
+          "name": "Como funciona",
+          "slug": "como-funciona",
+          "published": false
+        }
+      },
+      {
+        "name": "Sobre Moty",
+        "type": "content",
+        "model": "pages",
+        "value": {
+          "id": "601fe306040a4a291e5383ff",
+          "name": "Sobre nosotros",
+          "slug": "sobre-nosotros",
+          "published": true
+        }
+      },
+      {
+        "name": "Contacto",
+        "type": "heading"
+      }
+    ]
+  }
+]

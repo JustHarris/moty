@@ -1,0 +1,38 @@
+{
+  "name": "Page",
+  "model": "content/pages",
+  "fields": [
+    {
+      "id": "sections",
+      "type": "collection",
+      "item_types": [
+        "collection_preview",
+        "customer_reviews",
+        "email_signup",
+        "full_width_media",
+        "large_media",
+        "multi_feature",
+        "multi_panel",
+        "press_mentions",
+        "heading_with_text",
+        "moty_faq",
+        "moty_customer_reviews",
+        "moty_full_width_media",
+        "moty_full_width_media_image",
+        "moty_animation_full_width_media",
+        "moty_multi_feature",
+        "moty_multi_feature_two_columns",
+        "moty_list_of_products",
+        "moty_multi_feature_product",
+        "moty_slider_product",
+        
+        "moty_heading_with_text",
+        "moty_squared_explanation",
+        "moty_text_with_image",
+        "moty_featured_phrase",
+        "moty_hero_header",
+        "moty_misc_content"
+      ]
+    }
+  ]
+}

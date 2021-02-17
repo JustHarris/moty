@@ -1,0 +1,59 @@
+{
+  "name": "Moty FAQ",
+  "description": "Moty FAQ module with heading and a collection of items (accordion like)",
+  "fields": [
+    {
+      "label": "Content",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "heading",
+          "label": "Heading",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "items",
+          "label": "FAQ Items",
+          "type": "collection",
+          "required": true,
+          "fields": [
+            {
+              "id": "title",
+              "label": "Question",
+              "type": "text"
+            },            
+            {
+              "id": "value",
+              "label": "Explanation",
+              "type": "textarea",
+              "ui": "basic_html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Styling",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "bg_color",
+          "label": "Background color",
+          "type": "select",
+          "default": "primary-lighter",
+          "options": [
+            {
+              "value": "primary-lightest",
+              "label": "Background (primary)"
+            },
+            {
+              "value": "primary-lighter",
+              "label": "Background (secondary)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

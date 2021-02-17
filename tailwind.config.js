@@ -1,0 +1,190 @@
+const map = require('lodash/map')
+
+module.exports = {
+  theme: {
+    colors: {
+      outline: 'var(--colors-outline)',
+      primary: {
+        darkest: 'var(--colors-primary-darkest)',
+        darker: 'var(--colors-primary-darker)',
+        dark: 'var(--colors-primary-dark)',
+        med: 'var(--colors-primary-med)',
+        light: 'var(--colors-primary-light)',
+        lighter: 'var(--colors-primary-lighter)',
+        lightest: 'var(--colors-primary-lightest)',
+      },
+      accent: {
+        default: 'var(--colors-accent)',
+      },
+      ok: {
+        default: 'var(--colors-status-ok)',
+        faded: 'var(--colors-status-ok-faded)',
+      },
+      warning: {
+        default: 'var(--colors-status-warning)',
+      },
+      error: {
+        default: 'var(--colors-status-error)',
+        faded: 'var(--colors-status-error-faded)',
+      },
+      transparent: 'transparent',
+      current: 'currentColor',
+      moty: {
+        darkest: 'var(--colors-moty-darkest)',
+        darker: 'var(--colors-moty-darker)',
+        dark: 'var(--colors-moty-dark)',
+        light: 'var(--colors-moty-light)',
+        lighter: 'var(--colors-moty-lighter)',
+        lightest: 'var(--colors-moty-lightest)',
+        oklight: 'var(--colors-moty-oklight)',
+        okmed: 'var(--colors-moty-okmed)',
+        okdark: 'var(--colors-moty-okdark)',
+        error: 'var(--colors-moty-error)',
+        errorfaded: 'var(--colors-moty-errorfaded)',
+        transparent: 'var(--colors-moty-transparent)',
+      },
+    },
+    fontFamily: {
+      heading: 'var(--typography-base)',
+      heading_bold: 'var(--typography-bold)',
+      body: 'var(--typography-base)',
+      body_medium: 'var(--typography-medium)',
+      body_semibold: 'var(--typography-semibold)',
+      body_bold: 'var(--typography-bold)',
+    },
+    fontSize: {
+      '2xs': 'var(--type-scale--3)',
+      xs: 'var(--type-scale--2)',
+      sm: 'var(--type-scale--1)',
+      base: 'var(--type-scale-0)',
+      md: 'var(--type-scale-1)',
+      lg: 'var(--type-scale-4)',
+      xl: 'var(--type-scale-8)',
+      '2xl': 'var(--type-scale-16)',
+      '3xl': 'var(--type-scale-19)',
+      '4xl': 'var(--type-scale-20)',
+      '5xl': 'var(--type-scale-21)',
+      '6xl': 'var(--type-scale-22)',
+      '7xl': 'var(--type-scale-23)',
+      '8xl': 'var(--type-scale-23)',
+    },
+    spacing: {
+      px: '1px',
+      '2px': '2px',
+      '0': '0',
+      '1': '0.25rem',
+      '2': '0.5rem',
+      '3': '0.75rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '7': '1.75rem',
+      '8': '2rem',
+      '9': '2.25rem',
+      '10': '2.5rem',
+      '12': '3rem',
+      '14': '3.5rem',
+      '16': '4rem',
+      '18': '4.5rem',
+      '20': '5rem',
+      '22': '5.5rem',
+      '24': '6rem',
+      '26': '6.5rem',
+      '28': '7rem',
+      '32': '8rem',
+      '34': '8.5rem',
+      '36': '9rem',
+      '40': '10rem',
+      '44': '11rem',
+      '48': '12rem',
+      '56': '14rem',
+      '64': '16rem',
+      '72': '18rem',
+      '80': '20rem',
+      '96': '24rem',
+      '112': '28rem',
+      '128': '32rem',
+      '160': '40rem',
+      '256': '64rem',
+      '1/2': '50%',
+      '1/3': '33.33333%',
+      '2/3': '66.66667%',
+      '1/4': '25%',
+      '3/4': '75%',
+      '1/5': '20%',
+      '2/5': '40%',
+      '3/5': '60%',
+      '4/5': '80%',
+      '9/10': '90%',
+      '25vh': '25vh',
+      full: '100%',
+      '6/5': '120%',
+    },
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+    },
+    zIndex: {
+      auto: 'auto',
+      '0': '0',
+      '10': '10',
+      '20': '20',
+      '30': '30',
+      '40': '40',
+      '50': '50',
+      '-1': '-1',
+      '-5': '-5',
+    },
+    minWidth: theme => ({
+      ...theme('spacing'),
+    }),
+    maxWidth: theme => ({
+      ...theme('spacing'),
+    }),
+    minHeight: theme => ({
+      ...theme('spacing'),
+    }),
+    maxHeight: theme => ({
+      ...theme('spacing'),
+    }),
+    borderColor: theme => ({
+      ...theme('colors'),
+      default: theme('colors.primary.dark', 'currentColor'),
+    }),
+    inset: theme => ({
+      auto: 'auto',
+      ...theme('spacing'),
+    }),
+    rotate: {
+      '90': '90deg',
+      '180': '180deg'
+    },
+    extend: {
+      boxShadow: theme => ({
+        md: '0 2px 4px 0 rgba(0,0,0,0.08)',
+        outline: `0 0 0 3px ${theme('colors.outline')}`,
+      }),
+    },
+  },
+  variants: {
+    borderWidth: ['responsive', 'first', 'last', 'odd', 'even'],
+    margin: ['responsive', 'first', 'last'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+    translate: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
+  plugins: [
+    function({ addUtilities, config, e }) {
+      const rotateUtilities = map(config('theme.rotate'), (value, key) => {
+        return {
+          [`.${e(`rotate-${key}`)}`]: {
+            transform: `rotate(${value})`,
+          },
+        }
+      })
+
+      addUtilities(rotateUtilities, ['hover'])
+    },
+  ],
+}

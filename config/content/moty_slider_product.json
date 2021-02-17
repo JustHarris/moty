@@ -1,0 +1,133 @@
+{
+  "name": "Moty Slider product",
+  "description": "Slider of a product",
+  "fields": [
+    {
+      "label": "Content",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "name",
+          "label": "name of product",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "price",
+          "label": "Price of product",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "images",
+          "label": "Images",
+          "type": "collection",
+          "max": 1,
+          "fields": [
+            {
+              "id": "image",
+              "label": "Product image",
+              "type": "image",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "features",
+          "label": "Features",
+          "type": "collection",
+          "fields": [
+            {
+              "id": "speed",
+              "label": "Speed",
+              "type": "text",
+              "required": true
+            },
+            {
+              "id": "autonomy",
+              "label": "Autonomy",
+              "type": "text",
+              "required": true
+            },
+            {
+              "id": "battery_time",
+              "label": "Battery time",
+              "type": "text",
+              "required": true
+            },
+            {
+              "id": "is_folding",
+              "label": "Folding bicycle",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "id": "weight",
+              "label": "Weight",
+              "type": "text",
+              "required": true
+            },
+            {
+              "id": "links",
+              "label": "Links",
+              "type": "collection",
+              "max": 1,
+              "fields": [
+                {
+                  "id": "style",
+                  "label": "Style",
+                  "type": "select",
+                  "default": "button_primary",
+                  "options": [
+                    {
+                      "value": "button_primary",
+                      "label": "Primary button"
+                    },
+                    {
+                      "value": "button_outline",
+                      "label": "Outline button"
+                    }
+                  ]
+                },
+                {
+                  "id": "label",
+                  "label": "Label text",
+                  "type": "text",
+                  "required": true
+                },
+                {
+                  "id": "url",
+                  "label": "Link URL",
+                  "type": "url",
+                  "required": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Styling",
+      "type": "field_group",
+      "fields": [
+        {
+          "id": "direction",
+          "label": "Direction",
+          "type": "select",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left product"
+            },
+            {
+              "value": "right",
+              "label": "Right product"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

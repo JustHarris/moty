@@ -1,0 +1,456 @@
+{
+  "label": "Origin",
+  "author": "Swell",
+  "description": "Swell's original storefront theme",
+  "settings": [
+    {
+      "label": "Style",
+      "fields": [
+        {
+          "label": "Moty primary colors",
+          "type": "heading"
+        },
+        {
+          "id": "colors.moty.darkest",
+          "label": "Moty color: darkest",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.darker",
+          "label": "Moty color: darker",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.dark",
+          "label": "Moty color: dark",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.light",
+          "label": "Moty color: light",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.lighter",
+          "label": "Moty color: lighter",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.lightest",
+          "label": "Moty color: lightest",
+          "type": "color"
+        },
+        {
+          "label": "Moty secondary colors",
+          "type": "heading"
+        },
+        {
+          "id": "colors.moty.oklight",
+          "label": "Moty color: oklight",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.okmed",
+          "label": "Moty color: okmed",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.okdark",
+          "label": "Moty color: okdark",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.error",
+          "label": "Moty color: error",
+          "type": "color"
+        },
+        {
+          "id": "colors.moty.errorfaded",
+          "label": "Moty color: errorfaded",
+          "type": "color"
+        },
+        {
+          "label": "Moty typography",
+          "type": "heading"
+        },
+        {
+          "id": "typography.scale_base_size",
+          "label": "Base text size",
+          "type": "font_size",
+          "mode": "body",
+          "default": "16px"
+        },
+        {
+          "id": "typography.scale_ratio",
+          "label": "Text size scale",
+          "type": "select",
+          "default": 1.125,
+          "options": [
+            {
+              "value": 1.067,
+              "label": "Minor second (15:16)"
+            },
+            {
+              "value": 1.125,
+              "label": "Major second (8:9)"
+            },
+            {
+              "value": 1.2,
+              "label": "Minor third (5:6)"
+            },
+            {
+              "value": 1.25,
+              "label": "Major third (4:5)"
+            },
+            {
+              "value": 1.333,
+              "label": "Perfect fourth (3:4)"
+            },
+            {
+              "value": 1.414,
+              "label": "Augmented fourth (1:√2)"
+            }
+          ]
+        },
+        {
+          "label": "Product previews",
+          "type": "heading"
+        },
+        {
+          "id": "product_previews.aspect_ratio",
+          "label": "Image aspect ratio",
+          "type": "select",
+          "default": "1:1",
+          "options": [
+            {
+              "value": "2:3",
+              "label": "Extra tall (2:3)"
+            },
+            {
+              "value": "3:4",
+              "label": "Tall (3:4)"
+            },
+            {
+              "value": "1:1",
+              "label": "Square (1:1)"
+            },
+            {
+              "value": "4:3",
+              "label": "Wide (4:3)"
+            },
+            {
+              "value": "3:2",
+              "label": "Extra wide (3:2)"
+            }
+          ]
+        },
+        {
+          "id": "product_previews.text_align",
+          "label": "Text alignment",
+          "type": "select",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "header",
+      "label": "Header",
+      "fields": [
+        {
+          "id": "header.logo",
+          "label": "Logo image",
+          "type": "image",
+          "description": "450 x 200px recommended"
+        },
+        {
+          "id": "header.logo_height",
+          "label": "Logo height",
+          "type": "number",
+          "default": 45,
+          "ui": "slider",
+          "unit": "px",
+          "min": 30,
+          "max": 90
+        },
+        {
+          "id": "header.favicon",
+          "label": "Favicon",
+          "type": "image",
+          "max_width": 32,
+          "max_height": 32,
+          "description": "32 x 32px recommended"
+        },
+        {
+          "type": "heading",
+          "label": "Promotion bar"
+        },
+        {
+          "id": "header.show_promo",
+          "label": "Show promo bar",
+          "type": "toggle",
+          "default": false
+        },
+        {
+          "id": "header.promo_text",
+          "label": "Promo bar text",
+          "type": "short_text",
+          "conditions": { "header.show_promo": true }
+        },
+        {
+          "id": "header.promo_url",
+          "label": "Promo bar URL",
+          "type": "url",
+          "conditions": { "header.show_promo": true }
+        },
+        {
+          "type": "heading",
+          "label": "Navigation menu"
+        },
+        {
+          "id": "header.menu",
+          "label": "Main menu",
+          "type": "menu",
+          "default": "header"
+        },
+        {
+          "id": "header.hide_on_scroll",
+          "label": "Hide header when scrolling down",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "fields": [
+        {
+          "id": "footer.menu",
+          "label": "Footer menu",
+          "type": "menu",
+          "default": "footer"
+        },
+        {
+          "id": "footer.show_secondary_menu",
+          "label": "Show secondary footer menu",
+          "type": "toggle",
+          "default": true
+        },
+        {
+          "id": "footer.secondary_menu",
+          "label": "Secondary footer menu",
+          "type": "menu",
+          "default": "footer-secondary",
+          "conditions": { "footer.show_secondary_menu": true }
+        },
+        {
+          "id": "footer.show_social",
+          "label": "Show social icons",
+          "description": "Show social media icons (if link URL has been defined)",
+          "type": "toggle",
+          "default": true
+        },
+        {
+          "id": "footer.show_contact_info",
+          "label": "Show contact info",
+          "type": "toggle",
+          "default": true
+        },
+        {
+          "id": "footer.contact_info_heading",
+          "label": "Contact info heading",
+          "type": "short_text",
+          "default": "Contact us",
+          "conditions": { "footer.show_contact_info": true }
+        },
+        {
+          "id": "footer.contact_info_text",
+          "label": "Contact info text",
+          "type": "basic_html",
+          "conditions": { "footer.show_contact_info": true }
+        },
+        {
+          "id": "footer.show_email_signup",
+          "label": "Show email signup",
+          "type": "toggle",
+          "default": true
+        },
+        {
+          "id": "footer.email_signup_heading",
+          "label": "Email signup heading",
+          "type": "short_text",
+          "default": "Email newsletter",
+          "conditions": { "footer.show_email_signup": true }
+        },
+        {
+          "id": "footer.email_signup_text",
+          "label": "Show email signup text",
+          "type": "basic_html",
+          "conditions": { "footer.show_email_signup": true }
+        },
+        {
+          "id": "footer.background",
+          "label": "Footer background",
+          "type": "select",
+          "default": "dark",
+          "options": [
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "light",
+              "label": "Light"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cart",
+      "label": "Cart",
+      "fields": [
+        {
+          "id": "cart.info_text",
+          "label": "Cart info text",
+          "type": "basic_html"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social media & sharing",
+      "fields": [
+        {
+          "label": "Profiles",
+          "type": "heading"
+        },
+        {
+          "id": "social_links.twitter.show",
+          "label": "Twitter",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.twitter.url",
+          "label": "Twitter profile URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://twitter.com/mystore"
+        },
+        {
+          "id": "social_links.facebook.show",
+          "label": "Facebook",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.facebook.url",
+          "label": "Facebook page URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://www.facebook.com/mystore"
+        },
+        {
+          "id": "social_links.pinterest.show",
+          "label": "Pinterest",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.pinterest.url",
+          "label": "Pinterest profile URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://www.pinterest.com/mystore"
+        },
+        {
+          "id": "social_links.instagram.show",
+          "label": "Instagram",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.instagram.url",
+          "label": "Instagram profile URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://www.instagram.com/mystore"
+        },
+        {
+          "id": "social_links.youtube.show",
+          "label": "YouTube",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.youtube.url",
+          "label": "YouTube channel URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://www.youtube.com/c/mystore"
+        },
+        {
+          "id": "social_links.vimeo.show",
+          "label": "Vimeo",
+          "type": "toggle"
+        },
+        {
+          "id": "social_links.vimeo.url",
+          "label": "Vimeo profile URL",
+          "type": "short_text",
+          "format": "url",
+          "placeholder": "https://vimeo.com/mystore"
+        }
+      ]
+    }
+  ],
+  "page_route": "/:slug/",
+  "pages": [
+    {
+      "label": "Product detail pages",
+      "route": "/products/:slug/",
+      "content": "/products/{slug}"
+    },
+    {
+      "label": "Category detail pages",
+      "route": ["/categories/:slug/", "/products/"],
+      "content": "/categories/{slug}"
+    }
+  ],
+  "menus": [
+    {
+      "id": "header",
+      "label": "Header menu",
+      "description": "Top-level navigation menu displayed at the top of the site",
+      "max_items": 6,
+      "item_types": ["url", "content", "product", "category"],
+      "child_items": {
+        "columns": true,
+        "max_columns": 4,
+        "item_types": ["heading", "url", "content", "product", "category"],
+        "child_items": false
+      }
+    },
+    {
+      "id": "footer",
+      "label": "Footer menu",
+      "description": "Menu displayed at the bottom of the site",
+      "columns": true,
+      "max_columns": 3,
+      "item_types": ["heading", "url", "content", "product", "category"],
+      "child_items": false
+    },
+    {
+      "id": "footer-secondary",
+      "label": "Footer secondary",
+      "description": "Small links displayed at the bottom of the site footer for store and legal policies",
+      "max_items": 5
+    }
+  ]
+}
